@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday To My Amazing Elder Sister! 👑🎂✨ [v6.0 Ultimate]</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Cinzel:wght@400;600;700;800&family=Montserrat:wght@300;400;500;600;700&family=Pacifico&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Montserrat',sans-serif;
+    background:#020005;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* =========================
+   HOLOGRAPHIC UNIVERSE
+========================= */
+#universe{
+    position:fixed;
+    inset:0;
+    z-index:-3;
+    overflow:hidden;
+    background:
+    radial-gradient(circle at 10% 20%,#6a0dad 0%,transparent 40%),
+    radial-gradient(circle at 90% 80%,#0055ff 0%,transparent 40%),
+    radial-gradient(circle at 50% 50%,#ff007f 0%,transparent 60%),
+    #020005;
+}
+
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+    box-shadow:0 0 12px #ff1493, 0 0 25px #00ffff;
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{opacity:.2; transform:scale(.4);}
+    to{opacity:1; transform:scale(2.2);}
+}
+
+.shooting-star{
+    position:absolute;
+    width:180px;
+    height:2px;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,1),#ff1493);
+    transform:rotate(-45deg);
+    animation:shoot 2.5s linear forwards;
+    opacity:0;
+}
+
+@keyframes shoot{
+    0%{opacity:0; transform:translate(0,0) rotate(-45deg);}
+    15%{opacity:1;}
+    100%{opacity:0; transform:translate(-800px,800px) rotate(-45deg);}
+}
+
+/* =========================
+   CURSOR SPARKLES
+========================= */
+.cursor-sparkle{
+    position:fixed;
+    pointer-events:none;
+    z-index:50000;
+    font-size:16px;
+    animation:cursorFloat 1s linear forwards;
+}
+
+@keyframes cursorFloat{
+    0%{transform:translate(0,0) scale(1); opacity:1;}
+    100%{transform:translate(0,-70px) scale(0); opacity:0;}
+}
+
+/* =========================
+   LOADER SCREEN
+========================= */
+#loader{
+    position:fixed;
+    inset:0;
+    background:#010003;
+    z-index:99999;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.loader-crown{
+    font-size:100px;
+    animation:bounceFloat 2s infinite ease-in-out;
+}
+
+@keyframes bounceFloat{
+    0%, 100%{transform:translateY(0);}
+    50%{transform:translateY(-20px);}
+}
+
+.loader-title{
+    font-family:'Pacifico',cursive;
+    font-size:clamp(35px,7vw,75px);
+    margin:15px;
+    background:linear-gradient(45deg, #ff1493, #ffd700, #00ffff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.loader-text{
+    font-family:'Cinzel',serif;
+    color:#ffd700;
+    letter-spacing:4px;
+    font-size:13px;
+}
+
+.loading-box{
+    width:min(340px,80%);
+    height:6px;
+    background:#1a1a24;
+    border-radius:30px;
+    overflow:hidden;
+    margin-top:25px;
+    border:1px solid rgba(255,255,255,0.1);
+}
+
+.loading-progress{
+    height:100%;
+    width:0%;
+    background:linear-gradient(90deg,#ff1493,#ffd700,#00ffff);
+    animation:loading 2.5s forwards;
+}
+
+@keyframes loading{
+    to{width:100%;}
+}
+
+/* =========================
+   MUSIC CONTROLLER
+========================= */
+.music{
+    position:fixed;
+    top:18px;
+    right:18px;
+    z-index:9999;
+}
+
+.music button{
+    font-family:'Montserrat',sans-serif;
+    padding:10px 20px;
+    border-radius:30px;
+    border:1px solid rgba(255,215,0,.4);
+    background:rgba(0,0,0,.7);
+    color:white;
+    cursor:pointer;
+    backdrop-filter:blur(12px);
+    transition:.3s;
+    font-weight:600;
+    font-size:13px;
+}
+
+.music button:hover{
+    transform:scale(1.08);
+    background:rgba(255,20,147,.3);
+    border-color:#ff1493;
+}
+
+/* =========================
+   INTRO & LIVE COUNTDOWN
+========================= */
+#intro{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.crown-main{
+    font-size:110px;
+    animation:bounceFloat 2.5s infinite ease-in-out;
+}
+
+.small-title{
+    font-family:'Cinzel',serif;
+    color:#ffd700;
+    letter-spacing:5px;
+    margin:12px;
+    font-size:clamp(12px, 2vw, 15px);
+}
+
+.main-title{
+    font-family:'Pacifico',cursive;
+    font-size:clamp(45px,9vw,115px);
+    text-shadow:0 0 30px #ff1493, 0 0 80px #ffd700;
+    margin-bottom:10px;
+}
+
+.countdown-banner{
+    display:flex;
+    gap:15px;
+    margin:22px 0;
+    background:rgba(255,255,255,0.05);
+    padding:15px 28px;
+    border-radius:22px;
+    border:1px solid rgba(255,215,0,0.3);
+    backdrop-filter:blur(15px);
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+.count-item span{
+    display:block;
+    font-family:'Cinzel',serif;
+    font-weight:bold;
+    color:#ffd700;
+}
+.count-item span:first-child{
+    font-size:26px;
+    text-shadow:0 0 10px rgba(255,215,0,0.5);
+}
+.count-item span:last-child{
+    font-size:10px;
+    letter-spacing:2px;
+    color:#bbb;
+}
+
+.intro-text{
+    max-width:850px;
+    font-size:17px;
+    line-height:2.3;
+    margin:20px auto;
+    color:#e6e6e6;
+}
+
+/* =========================
+   BUTTON STYLING
+========================= */
+.btn{
+    font-family:'Cinzel',serif;
+    padding:16px 36px;
+    margin:15px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    color:white;
+    font-size:16px;
+    font-weight:bold;
+    background:linear-gradient(45deg,#ff006e,#8b5cf6,#00c6ff,#ffd700,#ff006e);
+    background-size:400%;
+    animation:gradientShift 6s infinite linear;
+    box-shadow:0 10px 35px rgba(255,20,147,.4);
+    transition:.4s;
+}
+
+@keyframes gradientShift{
+    100%{background-position:400%;}
+}
+
+.btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 15px 50px rgba(255,215,0,.6);
+}
+
+/* =========================
+   SECTIONS CONTAINER
+========================= */
+.surprise-section{
+    display:none;
+    min-height:100vh;
+    padding:100px 20px 60px;
+    text-align:center;
+    animation:sectionReveal 1s ease;
+}
+
+@keyframes sectionReveal{
+    from{opacity:0; transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+.section-title{
+    font-family:'Pacifico',cursive;
+    font-size:clamp(45px,9vw,100px);
+    text-shadow:0 0 25px #ff1493, 0 0 60px #8b5cf6;
+}
+
+.section-subtitle{
+    font-family:'Cinzel',serif;
+    color:#ffd700;
+    margin:15px;
+    font-size:16px;
+    letter-spacing:1px;
+}
+
+.box{
+    max-width:900px;
+    margin:35px auto;
+    padding:40px 25px;
+    border-radius:35px;
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.15);
+    backdrop-filter:blur(20px);
+    box-shadow:0 20px 60px rgba(0,0,0,0.5);
+}
+
+.message{
+    font-family:'Playfair Display',serif;
+    font-style:italic;
+    font-size:clamp(20px,3.5vw,32px);
+    line-height:1.9;
+}
+
+/* =========================
+   TIMELINE MILESTONES
+========================= */
+.moon{ font-size:130px; animation:bounceFloat 3s infinite ease-in-out; }
+
+.timeline{
+    max-width:780px;
+    margin:40px auto;
+}
+
+.timeline-item{
+    text-align:left;
+    margin:22px 0;
+    padding:25px;
+    background:rgba(255,255,255,.04);
+    border-left:5px solid #ffd700;
+    border-radius:18px;
+    transition:.4s;
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.timeline-item:hover{
+    transform:translateX(10px);
+    background:rgba(255,255,255,.08);
+    border-color:#ff1493;
+}
+
+.timeline-item h3{
+    font-family:'Cinzel',serif;
+    color:#ffd700;
+    margin-bottom:8px;
+    font-size:19px;
+}
+
+/* =========================
+   ACHIEVEMENT BADGES
+========================= */
+.badge-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+    gap:20px;
+    max-width:850px;
+    margin:35px auto;
+}
+
+.badge-card{
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,215,0,0.2);
+    padding:25px 15px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.4s;
+    backdrop-filter:blur(10px);
+}
+
+.badge-card:hover{
+    transform:translateY(-8px);
+    background:rgba(255,20,147,0.15);
+    border-color:#ff1493;
+    box-shadow:0 10px 30px rgba(255,20,147,0.3);
+}
+
+.badge-icon{
+    font-size:50px;
+    margin-bottom:12px;
+    display:block;
+}
+
+.badge-card h4{
+    font-family:'Cinzel',serif;
+    color:#ffd700;
+    margin-bottom:6px;
+    font-size:16px;
+}
+
+.badge-card p{
+    font-size:13px;
+    color:#ccc;
+    line-height:1.5;
+}
+
+/* =========================
+   NEW GAME: CATCH-A-WISH
+========================= */
+.game-arena{
+    width:min(850px,95%);
+    height:420px;
+    margin:30px auto;
+    position:relative;
+    overflow:hidden;
+    border-radius:30px;
+    background:rgba(10, 5, 25, 0.6);
+    border:2px solid rgba(255,215,0,0.3);
+    box-shadow:inset 0 0 30px rgba(0,0,0,0.8);
+    cursor:crosshair;
+}
+
+.falling-star{
+    position:absolute;
+    font-size:40px;
+    cursor:pointer;
+    user-select:none;
+    animation: fallDown linear forwards;
+    filter: drop-shadow(0 0 10px #ffd700);
+    transition: transform 0.1s;
+}
+
+.falling-star:hover{
+    transform: scale(1.4);
+}
+
+@keyframes fallDown{
+    0% { transform: translateY(-50px) rotate(0deg); }
+    100% { transform: translateY(450px) rotate(360deg); }
+}
+
+/* =========================
+   3D POLAROID GALLERY
+========================= */
+.gallery{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+    max-width:1150px;
+    margin:40px auto;
+}
+
+.photo{
+    width:245px;
+    height:335px;
+    padding:10px;
+    border-radius:22px;
+    background:linear-gradient(135deg,#ff1493,#ffd700,#00ffff,#8b5cf6);
+    transition:transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow:0 15px 35px rgba(0,0,0,0.6);
+}
+
+.photo:hover{
+    transform:scale(1.08) rotate(3deg) translateY(-10px);
+}
+
+.photo img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+/* =========================
+   GIFT BOXES
+========================= */
+.gifts{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:30px;
+    margin:40px auto;
+}
+
+.gift{
+    font-size:95px;
+    cursor:pointer;
+    transition:.4s;
+    filter:drop-shadow(0 10px 20px rgba(0,0,0,0.5));
+}
+
+.gift:hover{
+    transform:scale(1.25) rotate(12deg);
+    filter:drop-shadow(0 15px 30px rgba(255,215,0,0.5));
+}
+
+/* =========================
+   CASTLE PASSWORD
+========================= */
+.castle{ font-size:150px; animation:bounceFloat 3s infinite ease-in-out; }
+
+.password{
+    font-family:'Montserrat',sans-serif;
+    padding:16px 28px;
+    border-radius:30px;
+    border:1px solid #ffd700;
+    background:rgba(255,255,255,.08);
+    color:white;
+    font-size:17px;
+    text-align:center;
+    outline:none;
+    width:min(330px,90%);
+    backdrop-filter:blur(10px);
+    transition:0.3s;
+}
+
+.password:focus{
+    border-color:#ff1493;
+    box-shadow:0 0 20px rgba(255,20,147,0.4);
+}
+
+/* =========================
+   CINEMATIC TRANSITION
+========================= */
+#cinematic{
+    position:fixed;
+    inset:0;
+    z-index:9000;
+    background:#000;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    text-align:center;
+}
+
+.cinematic-text{
+    font-family:'Cinzel',serif;
+    font-size:clamp(30px,5vw,70px);
+    color:#ffd700;
+    animation:cinematicZoom 3s forwards;
+    padding:20px;
+    text-shadow:0 0 30px #ff1493;
+}
+
+@keyframes cinematicZoom{
+    from{opacity:0; transform:scale(.4);}
+    to{opacity:1; transform:scale(1);}
+}
+
+/* =========================
+   GRAND FINALE (NEW LOOK & OUTLOOK)
+========================= */
+#final{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:10000;
+    overflow:auto;
+    background:radial-gradient(circle at center, #2e004f 0%, #0d001a 70%, #000 100%);
+    text-align:center;
+    padding:60px 20px;
+}
+
+.final-title{
+    font-family:'Bungee Shade',cursive;
+    font-size:clamp(40px,8vw,120px);
+    color:#ffd700;
+    text-shadow:0 0 30px #ff1493, 0 0 80px #00ffff, 0 0 120px #ffd700;
+    animation: titleGlow 2s infinite alternate;
+}
+
+@keyframes titleGlow {
+    from { text-shadow:0 0 20px #ff1493, 0 0 40px #00ffff; }
+    to { text-shadow:0 0 50px #ffd700, 0 0 100px #ff1493, 0 0 150px #00ffff; }
+}
+
+.final-message{
+    font-family:'Playfair Display',serif;
+    max-width:850px;
+    margin:30px auto;
+    font-size:18px;
+    line-height:2.3;
+}
+
+.letter{
+    max-width:840px;
+    margin:40px auto;
+    padding:50px 30px;
+    border-radius:35px;
+    background:rgba(20, 10, 30, 0.75);
+    border:2px solid rgba(255,215,0,0.6);
+    box-shadow:0 0 80px rgba(255,20,147,0.4), inset 0 0 30px rgba(255,215,0,0.1);
+    backdrop-filter:blur(20px);
+}
+
+.signature{
+    font-family:'Pacifico',cursive;
+    color:#ffd700;
+    font-size:clamp(26px,4vw,45px);
+    margin-top:35px;
+}
+
+.final-love{
+    font-family:'Pacifico',cursive;
+    font-size:clamp(30px,5vw,60px);
+    color:#ffb6d9;
+    line-height:1.5;
+    margin-top:35px;
+    text-shadow:0 0 25px #ff1493, 0 0 70px #ff1493;
+    animation:lovePulse 2s infinite alternate;
+}
+
+@keyframes lovePulse{
+    from{transform:scale(1); opacity:.85;}
+    to{transform:scale(1.04); opacity:1; text-shadow:0 0 40px #ff1493, 0 0 90px #ffd700;}
+}
+
+/* =========================
+   EXPLOSIVE FIREWORKS & MULTI-DIRECTIONAL FX
+========================= */
+.floating-particle {
+    position: fixed;
+    pointer-events: none;
+    z-index: 20000;
+    animation: multiDirectionalFloat linear forwards;
+}
+
+@keyframes multiDirectionalFloat {
+    0% {
+        transform: translate(0, 0) scale(0.5) rotate(0deg);
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translate(var(--tx), var(--ty)) scale(1.4) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.vertical-streamer {
+    position: fixed;
+    pointer-events: none;
+    z-index: 15000;
+    animation: verticalMove linear forwards;
+}
+
+@keyframes verticalMove {
+    0% { transform: translateY(var(--start-y)); opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { transform: translateY(var(--end-y)); opacity: 0; }
+}
+
+/* =========================
+   MOBILE OPTIMIZATIONS
+========================= */
+@media(max-width:600px){
+    .surprise-section{padding-top:80px;}
+    .box{padding:25px 15px;}
+    .game-arena{height:350px;}
+    .photo{width:90%; max-width:280px;}
+    .gift{font-size:75px;}
+    .letter{padding:25px 15px;}
+}
+</style>
+</head>
+
+<body>
+
+<div id="universe"></div>
+
+<!-- BACKGROUND MUSIC -->
+<audio id="bg-music" loop preload="auto">
+    <source src="Birthday Song For Sister Mp3.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+</audio>
+
+<div class="music">
+    <button onclick="toggleMusic()" id="musicButton">🎵 Play Music</button>
+</div>
+
+<!-- CINEMATIC SCREEN -->
+<div id="cinematic">
+    <div class="cinematic-text">
+        👑 Unlocking Version 6.0 Ultimate Finale... 👑
+    </div>
+</div>
+
+<!-- LOADER -->
+<div id="loader">
+    <div class="loader-crown">👑</div>
+    <h1 class="loader-title">Loading v6.0 Magic...</h1>
+    <p class="loader-text">DEDICATED TO MY ELDER SISTER ON NOV 22</p>
+    <div class="loading-box">
+        <div class="loading-progress"></div>
+    </div>
+</div>
+
+<!-- INTRO SECTION -->
+<section id="intro">
+    <div class="crown-main">👑</div>
+    <p class="small-title">NOVEMBER 22 — THE QUEEN'S SPECIAL DAY ✨</p>
+    <h1 class="main-title">Happy Birthday Didi!</h1>
+    
+    <!-- Live Countdown Banner -->
+    <div class="countdown-banner" id="countdownBanner">
+        <div class="count-item"><span id="days">00</span><span>DAYS</span></div>
+        <div class="count-item"><span id="hours">00</span><span>HOURS</span></div>
+        <div class="count-item"><span id="mins">00</span><span>MINS</span></div>
+        <div class="count-item"><span id="secs">00</span><span>SECS</span></div>
+    </div>
+
+    <p class="intro-text">
+        Welcome to your exclusive Version 6.0 ultimate birthday experience! 🌌
+        <br><br>
+        To the world, you are an incredible individual... But to me, you are my ultimate protector, my lifelong guide, and my favorite person in the entire universe. 👑
+        <br><br>
+        From all our chaotic childhood fights to the moments you secretly covered for me, my life wouldn’t be complete without you. 🥹❤️
+        <br><br>
+        Let's take a journey through our best memories and celebrate the wonderful bond we share! ✨
+    </p>
+
+    <button class="btn" onclick="startJourney()">
+        🚀 Launch Sibling Journey v6.0
+    </button>
+</section>
+
+<!-- MEMORY MOON -->
+<section id="memoryMoon" class="surprise-section">
+    <div class="moon">🌙</div>
+    <h1 class="section-title">Sibling Memory Moon</h1>
+    <p class="section-subtitle">Starlit milestones of our brother-sister bond ✨</p>
+
+    <div class="box">
+        <p class="message">
+            Some bonds are forged by blood, but ours is strengthened by infinite laughter, endless care, and beautiful memories. ❤️
+        </p>
+    </div>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <h3>🛡️ My In-House Guardian</h3>
+            <p>Whenever I needed someone to stand up for me or help me navigate a problem, you were always right there.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>😂 Endless Banter & Midnight Talks</h3>
+            <p>Sharing snacks, secrets, and goofy jokes that only the two of us will ever understand.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>✨ Unshakeable Support</h3>
+            <p>Your encouragement when things got hard gave me the courage to keep moving forward.</p>
+        </div>
+        <div class="timeline-item">
+            <h3>💖 Partners in Everything</h3>
+            <p>No matter how old we grow, I will always be your annoying, loving younger brother looking up to you.</p>
+        </div>
+    </div>
+
+    <button class="btn" onclick="nextSection('memoryMoon','badgePlanet')">
+        🏆 Next: Sibling Badges →
+    </button>
+</section>
+
+<!-- SIBLING BADGE UNLOCKER -->
+<section id="badgePlanet" class="surprise-section">
+    <div style="font-size:120px;">🏆✨👑</div>
+    <h1 class="section-title">Sibling Hall of Fame</h1>
+    <p class="section-subtitle">Official titles unlocked for the best sister in the world! 🌟</p>
+
+    <div class="badge-grid">
+        <div class="badge-card">
+            <span class="badge-icon">👑</span>
+            <h4>Queen of Guidance</h4>
+            <p>Always knowing the right advice even when I didn't ask for it.</p>
+        </div>
+        <div class="badge-card">
+            <span class="badge-icon">🛡️</span>
+            <h4>Chief Protector</h4>
+            <p>Shielding me from getting scolded since day one.</p>
+        </div>
+        <div class="badge-card">
+            <span class="badge-icon">💖</span>
+            <h4>First Best Friend</h4>
+            <p>A bond that time, distance, and age can never change.</p>
+        </div>
+        <div class="badge-card">
+            <span class="badge-icon">🌟</span>
+            <h4>Family Sunshine</h4>
+            <p>Bringing warmth, positivity, and grace into our home every single day.</p>
+        </div>
+    </div>
+
+    <button class="btn" onclick="nextSection('badgePlanet','gameSection')">
+        🎮 Next: Catch-A-Wish Game →
+    </button>
+</section>
+
+<!-- NEW BRILLIANT GAME: CATCH-A-WISH -->
+<section id="gameSection" class="surprise-section">
+    <div style="font-size:110px;">🌠🎮✨</div>
+    <h1 class="section-title">Catch-A-Wish</h1>
+    <p class="section-subtitle">Click 10 falling birthday stars to unlock the next portal! ⭐</p>
+
+    <div class="box">
+        <h2 style="font-family:'Cinzel',serif;">
+            Stars Caught: <span id="gameScore">0</span> / 10
+        </h2>
+    </div>
+
+    <div class="game-arena" id="gameArena"></div>
+
+    <div id="gameComplete" style="display:none; margin-top:20px;">
+        <div class="box">
+            <p class="message">
+                Fantastic Reflexes! 🎉✨
+                <br><br>
+                You successfully caught all the birthday wishes! Ready for the gallery?
+            </p>
+        </div>
+    </div>
+
+    <button id="gameNext" class="btn" style="display:none; margin-top:20px;" onclick="nextSection('gameSection','memoryGallery')">
+        📸 Next: Gallery →
+    </button>
+</section>
+
+<!-- 3D MEMORY GALLERY -->
+<section id="memoryGallery" class="surprise-section">
+    <div style="font-size:120px;">📸🌌✨</div>
+    <h1 class="section-title">Holographic Gallery</h1>
+    <p class="section-subtitle">Polaroids frozen in time, glowing with love ❤️</p>
+
+    <div class="box">
+        <p class="message">Every snapshot tells a story of our unforgettable moments together. ✨</p>
+    </div>
+
+    <div class="gallery">
+        <div class="photo"><img src="WhatsApp Image 2026-09-03 at 9.33.38 PM (1).jpeg" alt="Memory"></div>
+        <div class="photo"><img src="WhatsApp Image 2026-09-03 at 9.33.38 PM.jpeg" alt="Memory"></div>
+        <div class="photo"><img src="WhatsApp Image 2026-09-03 at 9.35.32 PM.jpeg" alt="Memory"></div>
+        <div class="photo"><img src="me and sis.jpeg" alt="Brother and Sister"></div>
+    </div>
+
+    <button class="btn" onclick="nextSection('memoryGallery','surprisePanel')">
+        🎁 Next: Wish Boxes →
+    </button>
+</section>
+
+<!-- SURPRISE PANEL -->
+<section id="surprisePanel" class="surprise-section">
+    <div style="font-size:120px;">🎁🎀🎉</div>
+    <h1 class="section-title">Brother's Secret Vault</h1>
+    <p class="section-subtitle">Tap each package to reveal personal notes from your brother! 👀✨</p>
+
+    <div class="gifts">
+        <div class="gift" onclick="openGift(1)">🎁</div>
+        <div class="gift" onclick="openGift(2)">🎀</div>
+        <div class="gift" onclick="openGift(3)">💝</div>
+        <div class="gift" onclick="openGift(4)">🎁</div>
+    </div>
+
+    <div id="giftMessage" class="box">
+        <p class="message">Tap any gift box above to open a secret message! 🎁✨</p>
+    </div>
+
+    <button class="btn" onclick="nextSection('surprisePanel','birthdayCastle')">
+        🏰 Final Castle Door →
+    </button>
+</section>
+
+<!-- BIRTHDAY CASTLE -->
+<section id="birthdayCastle" class="surprise-section">
+    <div class="castle">🏰👑🎂</div>
+    <h1 class="section-title">The Grand Castle</h1>
+    <p class="section-subtitle">One final secure gate stands before your ultimate celebration! 🔐✨</p>
+
+    <div class="box">
+        <p class="message">
+            You have journeyed through the stars and memories... 🌌
+            <br><br>
+            Type the secret code word below to open the grand finale! 🔐
+        </p>
+        <br>
+        <input type="text" id="password" class="password" placeholder="Enter code word...">
+        <br>
+        <button class="btn" onclick="unlockFinal()">
+            🔐 Unlock Grand Finale v6.0
+        </button>
+        <p style="color:#ffd700; margin-top:15px; font-size:14px;">
+            Hint: The word is <b>LOVE</b> ❤️
+        </p>
+    </div>
+</section>
+
+<!-- GRAND FINALE -->
+<section id="final">
+    <div style="font-size:100px;">👑🎂🎆🎉💖</div>
+    <h1 class="final-title">Happy Birthday, Didi!</h1>
+
+    <div class="letter">
+        <div class="final-message">
+            <h2 style="font-family:'Cinzel',serif; color:#ffd700; font-size:clamp(22px,4vw,32px);">
+                👑 To My Dearest Elder Sister & Queen 👑
+            </h2>
+            <br>
+            November 22 is officially the most magical day of the year... 🎂✨
+            <br><br>
+            The day when the world was blessed with someone as graceful, caring, and radiant as you. 👑
+            <br><br>
+            Growing up with an elder sister like you has been the absolute greatest blessing of my life. You've taught me strength, kindness, and how to stay positive through everything. ❤️
+            <br><br>
+            Even when we argue or tease each other, you know that you mean the entire world to me. I look up to you more than words can ever capture. ✨
+            <br><br>
+            On your birthday, I pray that God fills your life with unbounded happiness, magnificent success, radiant health, and everything your heart desires. 🌟
+            <br><br>
+            Keep shining, keep smiling, and always remember your younger brother is forever cheering for you! 👑❤️
+            <br><br>
+            <h2 style="font-family:'Cinzel',serif; color:#ffd700; margin-top:15px;">
+                🎂 HAPPY BIRTHDAY TO THE BEST SISTER IN THE UNIVERSE! 🎂
+            </h2>
+        </div>
+
+        <div class="final-love">
+            I Love You So Much, Didi! 🥺❤️
+            <br><br>
+            Thank You For Always Being My Shield & Best Friend...
+            <br><br>
+            Have The Most Mind-Blowing Birthday Ever! 👑✨
+        </div>
+
+        <div class="signature">
+            Made with infinite ❤️ and tech magic by Your Loving Brother 👑
+        </div>
+    </div>
+
+    <button class="btn" onclick="restartJourney()">
+        🔄 Replay Version 6.0 Experience
+    </button>
+</section>
+
+<script>
+/* =========================
+   MUSIC CONTROLLER
+========================= */
+const music = document.getElementById("bg-music");
+const musicButton = document.getElementById("musicButton");
+
+function toggleMusic(){
+    if(music.paused){
+        music.play().then(()=>{
+            musicButton.innerHTML="⏸ Pause Music";
+        }).catch((error)=>{
+            console.log("Audio play error:", error);
+            alert("Please ensure your background music file is placed in the folder!");
+        });
+    }else{
+        music.pause();
+        musicButton.innerHTML="🎵 Play Music";
+    }
+}
+
+/* =========================
+   LIVE COUNTDOWN TO NOV 22
+========================= */
+function updateCountdown() {
+    const now = new Date();
+    let year = now.getFullYear();
+    let birthday = new Date(year, 10, 22); // Month 10 = November
+    
+    if (now > birthday) {
+        birthday = new Date(year + 1, 10, 22);
+    }
+    
+    const diff = birthday - now;
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const mins = Math.floor((diff / 1000 / 60) % 60);
+    const secs = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("days").innerText = String(days).padStart(2, '0');
+    document.getElementById("hours").innerText = String(hours).padStart(2, '0');
+    document.getElementById("mins").innerText = String(mins).padStart(2, '0');
+    document.getElementById("secs").innerText = String(secs).padStart(2, '0');
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+/* =========================
+   GENERATE UNIVERSE STARS
+========================= */
+const universe = document.getElementById("universe");
+for(let i=0; i<280; i++){
+    let star = document.createElement("div");
+    star.className = "star";
+    star.style.left = Math.random() * 100 + "vw";
+    star.style.top = Math.random() * 100 + "vh";
+    star.style.animationDelay = Math.random() * 3 + "s";
+    universe.appendChild(star);
+}
+
+/* =========================
+   SHOOTING STARS FX
+========================= */
+function createShootingStar(){
+    let shooting = document.createElement("div");
+    shooting.className = "shooting-star";
+    shooting.style.left = Math.random() * 100 + "vw";
+    shooting.style.top = Math.random() * 50 + "vh";
+    universe.appendChild(shooting);
+    setTimeout(()=>{ shooting.remove(); }, 2500);
+}
+setInterval(createShootingStar, 4000);
+
+/* =========================
+   CURSOR SPARKLES
+========================= */
+document.addEventListener("mousemove", function(e){
+    if(Math.random() > .8){
+        let sparkle = document.createElement("div");
+        sparkle.className = "cursor-sparkle";
+        const symbols = ["✨", "💖", "🌟", "💫"];
+        sparkle.innerHTML = symbols[Math.floor(Math.random()*symbols.length)];
+        sparkle.style.left = e.clientX + "px";
+        sparkle.style.top = e.clientY + "px";
+        document.body.appendChild(sparkle);
+        setTimeout(()=>{ sparkle.remove(); }, 1000);
+    }
+});
+
+/* =========================
+   LOADER TIMER
+========================= */
+window.addEventListener("load", function(){
+    setTimeout(function(){
+        document.getElementById("loader").style.display = "none";
+    }, 2500);
+});
+
+/* =========================
+   START JOURNEY
+========================= */
+function startJourney(){
+    document.getElementById("intro").style.display = "none";
+    document.getElementById("memoryMoon").style.display = "block";
+    music.play().then(()=>{
+        musicButton.innerHTML="⏸ Pause Music";
+    }).catch(e=>console.log(e));
+    window.scrollTo({top:0, behavior:"smooth"});
+    triggerFireworks(40);
+}
+
+/* =========================
+   NAVIGATE SECTIONS
+========================= */
+function nextSection(current, next){
+    document.getElementById(current).style.display = "none";
+    document.getElementById(next).style.display = "block";
+    window.scrollTo({top:0, behavior:"smooth"});
+    triggerFireworks(30);
+}
+
+/* =========================
+   NEW GAME LOGIC: CATCH-A-WISH
+========================= */
+const gameArena = document.getElementById("gameArena");
+let gameScore = 0;
+let gameInterval;
+const starSymbols = ["⭐", "🌟", "💫", "✨", "🌠"];
+
+function startCatchGame() {
+    gameArena.innerHTML = "";
+    gameScore = 0;
+    document.getElementById("gameScore").innerHTML = gameScore;
+    document.getElementById("gameComplete").style.display = "none";
+    document.getElementById("gameNext").style.display = "none";
+
+    gameInterval = setInterval(() => {
+        if (gameScore >= 10) {
+            clearInterval(gameInterval);
+            return;
+        }
+
+        let star = document.createElement("div");
+        star.className = "falling-star";
+        star.innerHTML = starSymbols[Math.floor(Math.random() * starSymbols.length)];
+        star.style.left = Math.random() * 85 + "%";
+        star.style.animationDuration = (2 + Math.random() * 1.5) + "s";
+
+        star.onclick = function() {
+            star.remove();
+            gameScore++;
+            document.getElementById("gameScore").innerHTML = gameScore;
+            triggerFireworks(8);
+
+            if (gameScore === 10) {
+                clearInterval(gameInterval);
+                document.getElementById("gameComplete").style.display = "block";
+                document.getElementById("gameNext").style.display = "inline-block";
+                triggerFireworks(80);
+                // Clear remaining falling stars
+                gameArena.innerHTML = "";
+            }
+        };
+
+        gameArena.appendChild(star);
+
+        setTimeout(() => {
+            if (star.parentElement) {
+                star.remove();
+            }
+        }, 3500);
+
+    }, 700);
+}
+
+// Trigger game start when section opens or reload
+// We can hook it into when badgePlanet leads to gameSection
+// Let's modify nextSection call or initialize on load
+const originalNextSection = window.nextSection;
+window.nextSection = function(current, next) {
+    document.getElementById(current).style.display = "none";
+    document.getElementById(next).style.display = "block";
+    window.scrollTo({top:0, behavior:"smooth"});
+    triggerFireworks(30);
+
+    if (next === 'gameSection') {
+        startCatchGame();
+    }
+};
+
+/* =========================
+   GIFT BOX MESSAGES
+========================= */
+function openGift(number){
+    const messages = {
+        1: "🎁 Surprise! May your radiant smile never fade because it brings so much joy to our home! 💖",
+        2: "🌟 No matter how much we argue, you will always be my absolute favorite sister and teammate! ✨",
+        3: "👑 May all your goals, big dreams, and career wishes manifest into reality this year!",
+        4: "❤️ The greatest blessing in my life is having an elder sister who always protects and cares for me. Love you Didi! 👑❤️"
+    };
+    document.getElementById("giftMessage").innerHTML = `<p class="message">${messages[number]}</p>`;
+    triggerFireworks(25);
+}
+
+/* =========================
+   UNLOCK GRAND FINALE
+========================= */
+function unlockFinal(){
+    const password = document.getElementById("password").value.trim().toLowerCase();
+    if(password === "love"){
+        document.getElementById("birthdayCastle").style.display = "none";
+        const cinematic = document.getElementById("cinematic");
+        cinematic.style.display = "flex";
+        triggerFireworks(80);
+        setTimeout(function(){
+            cinematic.style.display = "none";
+            document.getElementById("final").style.display = "block";
+            // Ultimate Grand Finale Multi-directional Fireworks & Streamers
+            triggerUltimateGrandFinaleFX();
+        }, 3000);
+    } else {
+        alert("🔐 Wrong code word! Hint: Type 'LOVE' ❤️");
+    }
+}
+
+/* =========================
+   FIREWORKS & EXPLOSIVE FX
+========================= */
+function triggerFireworks(amount){
+    const items = ["❤️","💖","✨","🌟","🎉","🎊","🎂","👑","💫","🎈"];
+    for(let i=0; i<amount; i++){
+        setTimeout(function(){
+            let item = document.createElement("div");
+            item.className = "floating-particle";
+            item.innerHTML = items[Math.floor(Math.random() * items.length)];
+            
+            // Random start from center or random spots
+            let startX = window.innerWidth / 2;
+            let startY = window.innerHeight / 2;
+            item.style.left = startX + "px";
+            item.style.top = startY + "px";
+
+            let angle = Math.random() * Math.PI * 2;
+            let distance = 100 + Math.random() * 400;
+            let tx = Math.cos(angle) * distance;
+            let ty = Math.sin(angle) * distance;
+
+            item.style.setProperty('--tx', tx + 'px');
+            item.style.setProperty('--ty', ty + 'px');
+            item.style.fontSize = (16 + Math.random() * 28) + "px";
+            item.style.animationDuration = (1.2 + Math.random() * 1.5) + "s";
+
+            document.body.appendChild(item);
+            setTimeout(()=>{ item.remove(); }, 2500);
+        }, i * 15);
+    }
+}
+
+function triggerUltimateGrandFinaleFX() {
+    // Massive continuous multi-directional firework bursts and vertical streamers
+    for (let wave = 0; wave < 5; wave++) {
+        setTimeout(() => {
+            triggerFireworks(70);
+        }, wave * 800);
+    }
+
+    // Vertical raining celebration stream
+    for(let i=0; i<45; i++){
+        let streamer = document.createElement("div");
+        streamer.className = "vertical-streamer";
+        const elements = ["🎆","🎇","✨","💖","🎈","⭐","👑","🎉"];
+        streamer.innerHTML = elements[Math.floor(Math.random() * elements.length)];
+        
+        streamer.style.left = Math.random() * 100 + "vw";
+        streamer.style.setProperty('--start-y', '-100px');
+        streamer.style.setProperty('--end-y', (window.innerHeight + 100) + 'px');
+        streamer.style.fontSize = (24 + Math.random() * 30) + "px";
+        streamer.style.animationDuration = (3 + Math.random() * 4) + "s";
+
+        document.body.appendChild(streamer);
+        setTimeout(()=>{ streamer.remove(); }, 8000);
+    }
+}
+
+/* =========================
+   RESTART EXPERIENCE
+========================= */
+function restartJourney(){
+    document.getElementById("final").style.display = "none";
+    document.getElementById("intro").style.display = "flex";
+    document.querySelectorAll(".surprise-section").forEach(s => s.style.display = "none");
+    document.getElementById("password").value = "";
+    window.scrollTo({top:0, behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
